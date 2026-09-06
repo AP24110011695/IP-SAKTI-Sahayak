@@ -1,0 +1,117 @@
+{
+  "description": "Five golden demo scenarios (Plan.md §13 / MEMBER_6.md §6) as machine-readable fixtures for the Phase 1 stub harness. Each scenario is executed through integration.assembler.Assembler with stub specialists; the out_of_corpus variant must produce a safe abstention (HTTP 200). In Phase 2 the same fixtures run against the real wired specialists.",
+  "scenarios": [
+    {
+      "id": "S1",
+      "title": "Traditional knowledge + patentability (classical formulation)",
+      "query": "Can I patent a classical Ayurvedic formulation from an authoritative text?",
+      "language": "en",
+      "jurisdiction": "India",
+      "expected_domain": "INDIA_IP",
+      "expect": {
+        "status_code": 200,
+        "abstention": false,
+        "answer_mentions": ["3(p)"],
+        "tkdl_pointer": "answer text names TKDL/tkdl.res.in (M3 behavior) — or the M4 tkdl_pointer field once M4 is wired in Phase 2",
+        "jurisdiction_separation": "answer must not name Madrid or Hague",
+        "citations": "at least one contract-valid citation"
+      },
+      "out_of_corpus": {
+        "query": "What is the fee for renewing a trademark in Japan under the Madrid Protocol?",
+        "expected": "abstention (HTTP 200, abstention=true, no citations, no fabricated content). Same out-of-corpus topic M3's own test suite uses: international trademark renewal is not in the India corpus.",
+        "note": "Out-of-corpus variants deliberately change TOPIC (like the real workstreams' own abstention tests) rather than paraphrase the golden query — a near-neighbour question about the same documented procedure would legitimately be answered."
+      }
+    },
+    {
+      "id": "S2",
+      "title": "ABS / biological-resource question (not patents)",
+      "query": "I want to commercialise a formulation using a plant collected in India - what approvals do I need?",
+      "language": "en",
+      "jurisdiction": "India",
+      "expected_domain": "ABS_TK",
+      "expect": {
+        "status_code": 200,
+        "abstention": false,
+        "answer_mentions": ["Biological Diversity Act"],
+        "not_patents": "domain is ABS_TK (see finding F-03 on M1's routing signals) and the answer is not a Section 3(p) patentability answer",
+        "citations": "at least one contract-valid citation"
+      },
+      "out_of_corpus": {
+        "query": "What is the fee for NBA approval to commercialise a plant-based formulation?",
+        "expected": "abstention (HTTP 200, abstention=true, no citations, no fabricated content). Mirrors M4's documented rule: the curated ABS corpus contains no fee/amount figures, so a fee question must abstain rather than invent a number."
+      }
+    },
+    {
+      "id": "S3",
+      "title": "Formulation classification: food (Ayurveda-Aahar) vs classical medicine",
+      "query": "Is my herbal product a food or medicine? It claims to support daily immunity and wellness.",
+      "language": "en",
+      "jurisdiction": "India",
+      "expected_domain": "CLASSIFICATION",
+      "expect": {
+        "query_flow": "free-text query flow abstains toward the guided classify flow (M2 is answers-driven)",
+        "classify_food": {
+          "answers": {
+            "primary_purpose": "food_wellness",
+            "food_exclusion": "none"
+          },
+          "expected_formulation_class": "Ayurveda-Aahar",
+          "regime_distinction": "FSSAI food regime named"
+        },
+        "classify_medicine": {
+          "answers": {
+            "primary_purpose": "therapeutic",
+            "text_source": "yes",
+            "standardised_fraction": "no",
+            "ingredients_known": "yes",
+            "new_indication": "no"
+          },
+          "expected_formulation_class": "Classical",
+          "regime_distinction": "drug regime named (D&C Act / Section 3(p) exposure / TKDL pointer)"
+        },
+        "discrimination": "the two answer-sets MUST land in different categories with different relevant_regimes"
+      },
+      "out_of_corpus": {
+        "answers": {},
+        "expected": "Uncertain with needs_clarification=true and a clarification_prompt (never a guessed category)"
+      }
+    },
+    {
+      "id": "S4",
+      "title": "Indian IP: GI registration for a region-tied Ayurvedic product",
+      "query": "How do I register a GI tag for an Ayurvedic product tied to a region?",
+      "language": "en",
+      "jurisdiction": "India",
+      "expected_domain": "INDIA_IP",
+      "expect": {
+        "status_code": 200,
+        "abstention": false,
+        "answer_mentions": ["Geographical Indication"],
+        "citations": "at least one contract-valid citation"
+      },
+      "out_of_corpus": {
+        "query": "Can I copyright my yoga video series in India?",
+        "expected": "abstention (HTTP 200, abstention=true, no citations, no fabricated content). Same weak-evidence topic M3's own test suite uses."
+      }
+    },
+    {
+      "id": "S5",
+      "title": "International patent filing: PCT, not Madrid, not Hague",
+      "query": "I want to file a patent for a new Ayurvedic drug outside India - what route do I use?",
+      "language": "en",
+      "jurisdiction": "International",
+      "expected_domain": "INTERNATIONAL_IP",
+      "expect": {
+        "status_code": 200,
+        "abstention": false,
+        "answer_mentions": ["PCT"],
+        "must_not_mention": ["Madrid", "Hague"],
+        "citations": "at least one contract-valid citation"
+      },
+      "out_of_corpus": {
+        "query": "How is spacecraft lease depreciation taxed?",
+        "expected": "abstention (HTTP 200, abstention=true, no citations, no fabricated content). Same out-of-corpus topic M5's own test suite uses."
+      }
+    }
+  ]
+}

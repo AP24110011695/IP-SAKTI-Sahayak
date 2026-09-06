@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IP-SAKTI Sahayak — Ayurvedic IP &amp; Regulatory Guidance</title>
+<meta name="description" content="Source-cited AI assistant for Ayurvedic intellectual property and regulatory guidance across India and international regimes.">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a5c3d' stroke-width='2'%3E%3Cpath d='M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z'/%3E%3Cpath d='M12 8v6M9.5 11.5c0-1.5 1-2.5 2.5-2.5s2.5 1 2.5 2.5c0 1.5-1 2.5-2.5 2.5s-2.5-1-2.5-2.5z'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- Inline SVG icon set (simple line icons, stroke = currentColor) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l7 2.6v5.6c0 4.6-3 7.7-7 9.3-4-1.6-7-4.7-7-9.3V5.6L12 3z"/>
+    <path d="M8.4 13.6c0-2.6 1.9-4.2 3.6-4.2s3.6 1.6 3.6 4.2"/>
+    <path d="M12 9.4v7.2"/>
+  </symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.3 8.9 8.9 0 0 1-3.2-.6L3 21l1.9-5.4a8 8 0 0 1-1-3.9A8.4 8.4 0 0 1 12.5 3.2 8.4 8.4 0 0 1 21 11.5z"/>
+  </symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 3h4M10 3v6.3L4.8 17a2.4 2.4 0 0 0 2.1 3.6h10.2a2.4 2.4 0 0 0 2.1-3.6L14 9.3V3"/>
+    <path d="M7.5 14.5h9"/>
+  </symbol>
+  <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><path d="M12 11v5.5"/><path d="M12 7.6v.2"/>
+  </symbol>
+  <symbol id="i-help" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><path d="M9.4 9.2a2.7 2.7 0 0 1 5.2.9c0 1.8-2.6 2.2-2.6 3.7"/><path d="M12 17v.2"/>
+  </symbol>
+  <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.5 12L20 4.5 16 20l-4.5-5.5L4.5 12z"/><path d="M11.5 14.5L20 4.5"/>
+  </symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.9 5.5 3.9 9S14.6 18.5 12 21c-2.6-2.5-3.9-5.5-3.9-9S9.4 5.5 12 3z"/>
+  </symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 16.5h4"/>
+  </symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 14a8 8 0 1 1 16 0"/><path d="M12 14l3.6-4.4"/><path d="M2.8 19h18.4"/>
+  </symbol>
+  <symbol id="i-shieldq" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l7 2.6v5.6c0 4.6-3 7.7-7 9.3-4-1.6-7-4.7-7-9.3V5.6L12 3z"/><path d="M9.8 9.6a2.3 2.3 0 0 1 4.4.8c0 1.5-2.2 1.9-2.2 3.1"/><path d="M12 16.4v.2"/>
+  </symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 4L2.8 19.5h18.4L12 4z"/><path d="M12 10v4.2"/><path d="M12 17.2v.2"/>
+  </symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 5h5v5"/><path d="M19 5l-8 8"/><path d="M19 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4"/>
+  </symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3v17"/><path d="M6 20h12"/><path d="M12 6l-6 2 0 0c0 2.5 1.3 4.4 3 4.4S12 10.5 12 8"/><path d="M12 6l6 2c0 2.5-1.3 4.4-3 4.4S12 10.5 12 8"/><path d="M4 8l8-3 8 3"/>
+  </symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 11a8 8 0 1 0-2.3 6.3"/><path d="M20 5v6h-6"/>
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.5 12.5l5 5L19.5 7"/>
+  </symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 19C5 9 12 4 20 4c0 8-5 15-15 15z"/><path d="M5 19c3-5 7-8.5 11-10.5"/>
+  </symbol>
+</svg>
+
+<div class="app">
+
+  <!-- ══════════════ LEFT SIDEBAR ══════════════ -->
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-mark"><svg class="icon icon-lg"><use href="#i-mark"/></svg></span>
+      <div class="brand-text">
+        <span class="brand-name">IP-SAKTI Sahayak</span>
+        <span class="brand-sub" data-i18n="brandSub">AI Assistant for Ayurvedic IP &amp; Regulatory Guidance</span>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Main">
+      <button class="nav-item active" data-view="chat" data-i18n="navChat">
+        <svg class="icon"><use href="#i-chat"/></svg>Chat Assistant
+      </button>
+      <button class="nav-item" data-view="classifier" data-i18n="navClassifier">
+        <svg class="icon"><use href="#i-flask"/></svg>Formulation Classifier
+      </button>
+      <button class="nav-item" data-view="about" data-i18n="navAbout">
+        <svg class="icon"><use href="#i-info"/></svg>About
+      </button>
+      <button class="nav-item" data-view="help" data-i18n="navHelp">
+        <svg class="icon"><use href="#i-help"/></svg>Help
+      </button>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="health" id="healthStatus" title="Backend /api/health">
+        <span class="health-dot" id="healthDot"></span>
+        <span id="healthText" data-i18n="healthChecking">Checking service…</span>
+      </div>
+      <p class="foot-note">Smart India Hackathon · SIH-26045<br>Team CyberSapien</p>
+      <p class="foot-tag" data-i18n="tagline">Traditional Knowledge. Protected Future.</p>
+    </div>
+  </aside>
+
+  <!-- ══════════════ CENTER CONTENT ══════════════ -->
+  <main class="main">
+
+    <header class="topbar">
+      <div class="topbar-titles">
+        <h1 id="viewTitle" data-i18n="navChat">Chat Assistant</h1>
+        <p id="viewHint" data-i18n="chatHint">Ask an India or International IP / regulatory question about an Ayurvedic product.</p>
+      </div>
+      <div class="controls">
+        <div class="control-group">
+          <span class="control-label"><svg class="icon icon-sm"><use href="#i-globe"/></svg><span data-i18n="jurisdiction">Jurisdiction</span></span>
+          <div class="segmented" id="jurisdictionToggle" role="group" aria-label="Jurisdiction">
+            <button class="seg active" data-value="India">India</button>
+            <button class="seg" data-value="International">International</button>
+          </div>
+        </div>
+        <div class="control-group">
+          <span class="control-label"><svg class="icon icon-sm"><use href="#i-leaf"/></svg><span data-i18n="formulation">Formulation class</span></span>
+          <select id="formulationSelect" class="select">
+            <option value="" data-i18n="autoDetect">Auto-detect</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <span class="control-label"><svg class="icon icon-sm"><use href="#i-globe"/></svg><span data-i18n="language">Language</span></span>
+          <div class="segmented" id="languageToggle" role="group" aria-label="Language">
+            <button class="seg active" data-value="en">English</button>
+            <button class="seg" data-value="hi">हिन्दी</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <p class="jurisdiction-note" id="jurisdictionNote"></p>
+
+    <!-- ──────────── CHAT VIEW ──────────── -->
+    <section class="view view-chat" id="view-chat">
+
+      <div class="demo-section">
+        <div class="demo-head">
+          <h2 class="section-title" data-i18n="demoTitle">Quick demo scenarios</h2>
+          <button type="button" class="btn-ghost btn-small hidden" id="newChatBtn" data-i18n="newChat">New conversation</button>
+        </div>
+        <div class="demo-cards" id="demoCards">
+          <button class="demo-card" data-scenario="classical-patent">
+            <svg class="icon"><use href="#i-scale"/></svg>
+            <span class="demo-title" data-i18n="demo1">Classical Patent</span>
+            <span class="demo-sub" data-i18n="demo1sub">Section 3(p) &amp; TKDL for classical formulations</span>
+          </button>
+          <button class="demo-card" data-scenario="abs">
+            <svg class="icon"><use href="#i-leaf"/></svg>
+            <span class="demo-title" data-i18n="demo2">ABS / Plant Approvals</span>
+            <span class="demo-sub" data-i18n="demo2sub">Biological Diversity Act route for plant-based products</span>
+          </button>
+          <button class="demo-card" data-scenario="classification">
+            <svg class="icon"><use href="#i-flask"/></svg>
+            <span class="demo-title" data-i18n="demo3">Formulation Classification</span>
+            <span class="demo-sub" data-i18n="demo3sub">Guided M2 questionnaire — food vs medicine</span>
+          </button>
+          <button class="demo-card" data-scenario="gi">
+            <svg class="icon"><use href="#i-file"/></svg>
+            <span class="demo-title" data-i18n="demo4">GI Registration</span>
+            <span class="demo-sub" data-i18n="demo4sub">Geographical Indication for a region-tied product</span>
+          </button>
+          <button class="demo-card" data-scenario="international-patent">
+            <svg class="icon"><use href="#i-globe"/></svg>
+            <span class="demo-title" data-i18n="demo5">International Patent</span>
+            <span class="demo-sub" data-i18n="demo5sub">PCT route for filing outside India</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="conversation" id="conversation" aria-live="polite">
+        <div class="welcome" id="welcome">
+          <svg class="icon icon-xl"><use href="#i-mark"/></svg>
+          <h2 data-i18n="welcomeTitle">Namaste. How can I help with your Ayurvedic product?</h2>
+          <p data-i18n="welcomeSub">Every answer is grounded in a curated corpus of real legal sources, with citations and a confidence level. When evidence is insufficient, I say so instead of guessing.</p>
+        </div>
+      </div>
+
+      <form class="composer" id="composer">
+        <textarea id="queryInput" rows="1" maxlength="2000"
+          data-i18n-ph="askPlaceholder"
+          placeholder="Ask an Ayurvedic IP / regulatory question…"
+          aria-label="Your question"></textarea>
+        <button type="submit" class="send-btn" id="sendBtn" aria-label="Send">
+          <svg class="icon"><use href="#i-send"/></svg>
+        </button>
+      </form>
+      <p class="composer-hint" data-i18n="composerHint">Information only — not legal advice. Answers cite their sources; insufficient evidence is declined, not guessed.</p>
+    </section>
+
+    <!-- ──────────── CLASSIFIER VIEW ──────────── -->
+    <section class="view view-classifier hidden" id="view-classifier">
+      <div class="classifer-head">
+        <h2 data-i18n="classifierTitle">Formulation Classifier</h2>
+        <p data-i18n="classifierIntro">Answer the guided questions below. The deterministic classifier sorts your product into a regulatory category — medicine, food (Ayurveda-Aahar), cosmetic and more — and maps the relevant regimes. Incomplete or contradictory answers safely yield <strong>Uncertain</strong> rather than a guess.</p>
+      </div>
+
+      <div class="classifier-grid">
+        <form class="card classifier-form" id="classifierForm">
+          <div class="form-meta">
+            <label class="field-label" data-i18n="jurisdiction">Jurisdiction</label>
+            <select id="clsJurisdiction" class="select select-inline">
+              <option value="India">India</option>
+              <option value="International">International</option>
+            </select>
+          </div>
+          <div id="classifierQuestions"><p class="muted" data-i18n="loadingQuestions">Loading guided questions…</p></div>
+          <div class="classifier-actions">
+            <button type="submit" class="btn-primary" data-i18n="classifyBtn">Classify formulation</button>
+            <button type="button" class="btn-ghost" id="clsReset" data-i18n="resetBtn">Reset</button>
+          </div>
+        </form>
+
+        <div class="card classifier-result hidden" id="classifierResult" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ──────────── ABOUT VIEW ──────────── -->
+    <section class="view view-static hidden" id="view-about">
+      <div class="static-card">
+        <h2 data-i18n="aboutTitle">About IP-SAKTI Sahayak</h2>
+        <p class="lead" data-i18n="aboutLead">A source-cited assistant for Ayurvedic intellectual property and regulatory guidance — across national and international regimes, in English and Hindi.</p>
+        <p>IP-SAKTI Sahayak helps practitioners, AYUSH startups, MSMEs and researchers navigate the overlapping regimes that decide whether an Ayurvedic product can be protected and commercialised: patents, geographical indications, trademarks, the Biological Diversity Act's access-and-benefit-sharing duties, and the drug / food / cosmetic regulatory tracks.</p>
+        <h3 data-i18n="aboutHow">What the system does</h3>
+        <ul>
+          <li><strong>Formulation Classifier</strong> — a deterministic, rule-based questionnaire sorts a product into Classical, Proprietary, Phytopharmaceutical, Ayurveda-Aahar, Cosmetic, New Drug — or Uncertain, with a clarification round.</li>
+          <li><strong>India IP &amp; Regulatory guidance</strong> — grounded answers with citations from real Indian statutes and registries (Patents Act § 3(p), GI Act, D&amp;C Act, FSSAI Ayurveda-Aahara and more).</li>
+          <li><strong>ABS / Traditional Knowledge guidance</strong> — Biological Diversity Act and NBA routes for plant-based products, with a safe TKDL pointer (TKDL's contents are restricted; the assistant points, never quotes).</li>
+          <li><strong>International IP guidance</strong> — TRIPS, WIPO GRATK, and the filing systems kept strictly separate: PCT for patents, Madrid for trademarks, Hague for industrial designs.</li>
+          <li><strong>Central assistant</strong> — routes each question to the right specialist and assembles the final cited answer; when evidence is insufficient it abstains instead of guessing.</li>
+        </ul>
+        <h3 data-i18n="aboutSafety">Safety principles</h3>
+        <ul>
+          <li>Never invents legal authority, citations, URLs, fees or deadlines.</li>
+          <li>India and International guidance are never conflated — the jurisdiction toggle is authoritative.</li>
+          <li>Every answer carries citations from curated authoritative sources (India Code, IP India, NBA, CDSCO, FSSAI, WIPO, WTO).</li>
+          <li>Insufficient evidence is declined openly — abstention is a normal outcome, not an error.</li>
+          <li>Output is general information, <strong>not legal advice</strong>.</li>
+        </ul>
+        <h3 data-i18n="aboutBuild">How it is built</h3>
+        <p>A retrieval-augmented pipeline over a small curated corpus of real sources. Each specialist domain validates its own citations and confidence; a central assistant routes and assembles. Without a hosted-LLM key the system runs in a deterministic evidence-only mode — answers quote the retrieved provisions rather than inventing narrative.</p>
+        <p class="muted">Smart India Hackathon · Problem Statement SIH-26045 (Ministry of Ayush — All India Institute of Ayurveda) · Team CyberSapien.</p>
+      </div>
+    </section>
+
+    <!-- ──────────── HELP VIEW ──────────── -->
+    <section class="view view-static hidden" id="view-help">
+      <div class="static-card">
+        <h2 data-i18n="helpTitle">Help</h2>
+
+        <h3 data-i18n="helpAsk">Asking a question</h3>
+        <p><span data-i18n="helpAskBody">Pick a jurisdiction and language in the top bar, then ask in plain language — or start from a Quick demo scenario card. Follow-up questions work: keep them short and the assistant resolves them against the previous turn.</span></p>
+
+        <h3 data-i18n="helpJurisdiction">Jurisdiction</h3>
+        <p><strong>India</strong> <span data-i18n="helpIndia">answers Indian law: Patents Act, GI Act, Trade Marks, D&amp;C Act, FSSAI, Biological Diversity Act.</span> <strong>International</strong> <span data-i18n="helpIntl">answers treaties and routes: TRIPS, WIPO GRATK, PCT, Madrid, Hague. The two answer-sets are never conflated — the toggle is authoritative.</span></p>
+        <p><span data-i18n="helpMap">System reminder:</span> PCT → patents · Madrid → trademarks · Hague → industrial designs.</p>
+
+        <h3 data-i18n="helpConfidence">Confidence &amp; abstention</h3>
+        <p><span data-i18n="helpConfBody">Every answer carries a confidence level (HIGH / MEDIUM / LOW) computed from evidence strength. When the curated corpus cannot support an answer, the assistant declines openly — you will see an "insufficient verified evidence" state with the reason. That is a safety feature, not an error.</span></p>
+
+        <h3 data-i18n="helpClassifier">Formulation Classifier</h3>
+        <p><span data-i18n="helpClsBody">Open the Formulation Classifier and answer the guided questions (in English or Hindi). The classifier is deterministic — the same answers always produce the same category — and incomplete or contradictory answers yield Uncertain with a clarification prompt instead of a guess.</span></p>
+
+        <h3 data-i18n="helpSources">Sources</h3>
+        <p><span data-i18n="helpSourcesBody">Citations link to official portals — India Code, IP India, the National Biodiversity Authority, CDSCO, FSSAI, WIPO and WTO. TKDL (tkdl.res.in) is referenced as a pointer: its detailed contents are available to patent offices, not the public.</span></p>
+
+        <h3 data-i18n="helpLimits">Limitations</h3>
+        <p><span data-i18n="helpLimitsBody">This is a hackathon MVP over a small curated corpus. It provides general information, not legal advice — verify with the official sources or a qualified professional before acting. A human IP-facilitator escalation path is not part of this build.</span></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════ RIGHT INFORMATION PANEL ══════════════ -->
+  <aside class="infopanel">
+    <div class="panel-card" id="metaCard">
+      <h3 class="panel-title"><svg class="icon icon-sm"><use href="#i-gauge"/></svg><span data-i18n="responseMeta">Response</span></h3>
+      <div class="meta-empty muted" data-i18n="noResponseYet">No response yet — ask a question to see confidence, status and routing details.</div>
+      <dl class="meta-list hidden" id="metaList"></dl>
+    </div>
+
+    <div class="panel-card">
+      <h3 class="panel-title"><svg class="icon icon-sm"><use href="#i-check"/></svg><span data-i18n="specialists">Connected specialists</span></h3>
+      <ul class="specialist-list" id="specialistList">
+        <li class="muted" data-i18n="loading">Loading…</li>
+      </ul>
+    </div>
+
+    <div class="panel-card">
+      <h3 class="panel-title"><svg class="icon icon-sm"><use href="#i-file"/></svg><span data-i18n="sourcesTitle">Sources &amp; citations</span></h3>
+      <div class="sources-empty muted" data-i18n="noSources">Citations from the latest answer will appear here.</div>
+      <ol class="sources-list" id="sourcesList"></ol>
+    </div>
+
+    <div class="panel-card disclaimer-card">
+      <h3 class="panel-title"><svg class="icon icon-sm"><use href="#i-shieldq"/></svg><span data-i18n="disclaimerTitle">Disclaimer</span></h3>
+      <p class="disclaimer-text" data-i18n="disclaimerBody">IP-SAKTI Sahayak provides general information, not legal advice. Answers are generated from a curated corpus of public sources and may be incomplete or outdated. Verify against official sources and consult a qualified IP professional before acting.</p>
+    </div>
+  </aside>
+</div>
+
+<script src="/js/api.js" defer></script>
+<script src="/js/i18n.js" defer></script>
+<script src="/js/classifier.js" defer></script>
+<script src="/js/app.js" defer></script>
+</body>
+</html>

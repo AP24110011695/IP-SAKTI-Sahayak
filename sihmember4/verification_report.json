@@ -1,0 +1,48 @@
+{
+  "checked_at_utc": "2026-09-06T21:41:35+00:00",
+  "corpus_version": "m4-abs-phase1-2026-09-06",
+  "results": [
+    {
+      "url": "https://egazette.gov.in/WritereadData/2023/247815.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "url": "https://megbiodiversity.nic.in/sites/default/files/Biodiversity_Act_2002.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "url": "https://tkdl.res.in/",
+      "status": 200,
+      "content_type": "text/html",
+      "ok": true,
+      "note": "verified via curl fallback (urllib TLS handshake failed) [urllib failure: URLError: <urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>]"
+    },
+    {
+      "url": "https://www.cbd.int/abs/doc/protocol/nagoya-protocol-en.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "url": "https://www.cbd.int/doc/legal/cbd-en.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "url": "https://www.nbaindia.nic.in/sites/default/files/2026-05/BD_Rules.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "ok": true,
+      "note": ""
+    }
+  ]
+}
