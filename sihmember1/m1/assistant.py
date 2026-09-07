@@ -1,7 +1,9 @@
 """M1 orchestration: QueryRequest -> QueryResponse.
 
 Flow (MEMBER_1.md §1), completed in Phase 3:
-  intent/context handling (incl. follow-up resolution via history)
+  local conversational layer (clear small talk answered deterministically,
+  everything else passes through untouched)
+  -> intent/context handling (incl. follow-up resolution via history)
   -> routing decision -> evidence retrieval (standalone corpus)
   -> evidence sufficiency -> grounded answer -> citation mapping & validation
   -> confidence -> abstention when needed -> final response.
@@ -34,6 +36,7 @@ from .config import (
     get_config,
 )
 from .corpus import Evidence, load_corpus
+from .conversation import local_response as local_conversational_response
 from .followup import effective_retrieval_query
 from .generation import GeneratedAnswer, NO_EVIDENCE_REASON, select_generator
 from .models import Citation, QueryRequest, QueryResponse
@@ -116,6 +119,28 @@ def handle_query(
     request: QueryRequest, config: Optional[Config] = None
 ) -> AssistantResult:
     cfg = config or get_config()
+
+    # 0. Local conversational layer (M6 Phase 4): clearly general small talk
+    #    ("hi", "thanks", "bye", "help", "okay") is answered locally from a
+    #    fixed response table and never enters legal routing. The intercept
+    #    only fires when EVERY token is in the closed conversational
+    #    vocabulary (m1.conversation) — any message carrying a genuine
+    #    legal/IP/regulatory word falls through to the flow below unchanged.
+    conversational = local_conversational_response(request)
+    if conversational is not None:
+        return AssistantResult(
+            response=conversational,
+            status="ok",
+            routing=RoutingDecision(
+                domain=Domain.GENERAL,
+                specialist_registered=False,
+                rationale=(
+                    "local conversational response (closed-vocabulary small "
+                    "talk, no legal/IP/regulatory scope terms)"
+                ),
+            ),
+            generator_used="local-conversation",
+        )
 
     # 1. Intent/context handling: short follow-up queries are resolved against
     #    the most recent user turn for routing and retrieval. The original
